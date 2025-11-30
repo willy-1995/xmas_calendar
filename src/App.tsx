@@ -75,7 +75,8 @@ function App() {
         Prise Zucker <br />
         bestreichen. <br /><br />
 
-        Das gibt die typische 7-Eleven Butterbun-Optik: glänzend, weich, buttrig, leicht süß.
+        Das gibt die typische 7-Eleven Butterbun-Optik: glänzend, weich, buttrig, leicht süß. <br /><br />
+        <b>PS: Schau mal in den Kühlschrank &#128516;</b>
 
       </p>
     </>),
