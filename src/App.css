@@ -1,3 +1,7 @@
+html{
+  
+}
+
 .body-div{
   display: flex;
   align-items: center;
@@ -7,11 +11,16 @@
   min-height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: oblique;
+  background-color: rgb(12, 12, 62);
  
 }
 
 h2{
   text-align: center;
+}
+
+.body-div h2{
+  color: rgb(255, 212, 38);
 }
 
 #calendar-div{

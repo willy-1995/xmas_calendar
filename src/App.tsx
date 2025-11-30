@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
-import './App.css'
+import { useRef, useState } from 'react';
+import './App.css';
+
 
 function App() {
 
@@ -7,22 +8,22 @@ function App() {
   const fields = Array.from({ length: 24 }, (_, i) => i + 1);
 
   //===== STATES
-  const [openField, setOpenField] = useState(null);
-  const [openedDoor, setOpenedDoor] = useState({});
+  const [openField, setOpenField] = useState<number | null>(null); // type!
+  const [openedDoor, setOpenedDoor] = useState<Record<number, boolean>>({}); //give state a type
   //===== REFS
-  const dialogRef = useRef(null);
+  const dialogRef = useRef<HTMLDialogElement>(null); //type!
 
   //=====DIALOG HANDLING
   const openDialog = () => {
-    dialogRef.current.showModal();
+    dialogRef.current!.showModal();
   };
 
   const closeDialog = () => {
-    dialogRef.current.close();
+    dialogRef.current!.close();
   }
 
   //=====BUTTON EVENTS
-  const dialogContent = {
+  const dialogContent: Record<number, React.ReactNode> = {
     1: (<>
       <a href="https://www.youtube.com/shorts/hL2d6MEBi60">Manchmal ist die Zukunft ungewiss. Man muss das Leben auf sich zukommen lassen. Aber ein Blick in die Zukunft kann manchmal vorteile bringen. Klicke hier um Klarheit zu erhalten.</a>
     </>),
@@ -109,7 +110,7 @@ function App() {
   const today = new Date();
   const currentDay = today.getDate();
 
-  const ShowButton = (n) => {
+  const ShowButton = (n: number) => {
     if (n > currentDay) {
       alert("Dieses Türchen darfst du noch nicht öffen ;-)");
       return;
@@ -129,6 +130,7 @@ function App() {
 
   return (
     <div className='body-div'>
+      
       <h2>Frohe Weihnachten <br />liebe Samira! </h2>
       <div id='calendar-div'>
         {fields.map((n) => (
@@ -158,7 +160,8 @@ function App() {
       <dialog ref={dialogRef}>
         <div id='dialog-div'>
           <h2>Türchen {openField}</h2>
-          {dialogContent[openField]}
+          {openField !== null && dialogContent[openField]} {/* left expresseion has to be true to print right expression */}
+
           <button id='closeButton' onClick={closeDialog}>Schließen</button>
         </div>
 
