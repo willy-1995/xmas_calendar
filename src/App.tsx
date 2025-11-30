@@ -25,9 +25,6 @@ function App() {
   //=====BUTTON EVENTS
   const dialogContent: Record<number, React.ReactNode> = {
     1: (<>
-      <a href="https://www.youtube.com/shorts/hL2d6MEBi60">Manchmal ist die Zukunft ungewiss. Man muss das Leben auf sich zukommen lassen. Aber ein Blick in die Zukunft kann manchmal vorteile bringen. Klicke hier um Klarheit zu erhalten.</a>
-    </>),
-    2: (<>
       <h2>Butterbun Rezept:</h2><br /><br />
       <p>
         <b>Zutaten für ca. 6 bis 8 Buns:</b><br /><br />
@@ -82,6 +79,9 @@ function App() {
 
       </p>
     </>),
+    2: (<>
+      <a href="https://www.youtube.com/shorts/hL2d6MEBi60">Manchmal ist die Zukunft ungewiss. Man muss das Leben auf sich zukommen lassen. Aber ein Blick in die Zukunft kann manchmal vorteile bringen. Klicke hier um Klarheit zu erhalten.</a>
+    </>),
     3: (<></>),
     4: (<></>),
     5: (<></>),
@@ -130,8 +130,9 @@ function App() {
 
   return (
     <div className='body-div'>
-      
-      <h2>Frohe Weihnachten <br />liebe Samira! </h2>
+      <video  autoPlay loop muted src="/xmas_calendar/media/cookieman.mp4"></video>
+
+      <h2 id='main-heading'>Frohe Weihnachten <br />liebe Samira! </h2>
       <div id='calendar-div'>
         {fields.map((n) => (
           <div
@@ -162,7 +163,9 @@ function App() {
           <h2>Türchen {openField}</h2>
           {openField !== null && dialogContent[openField]} {/* left expresseion has to be true to print right expression */}
 
-          <button id='closeButton' onClick={closeDialog}>Schließen</button>
+          <div id='button-div'>
+            <button id='closeButton' onClick={closeDialog}>Schließen</button>
+          </div>
         </div>
 
 
