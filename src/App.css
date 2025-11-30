@@ -1,0 +1,86 @@
+.body-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: oblique;
+ 
+}
+
+h2{
+  text-align: center;
+}
+
+#calendar-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 70%;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.calendar-field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: antiquewhite;
+  padding: 50px 10px;
+  height: 100px;
+  font-weight: 600;
+  transition: opacity 500ms ease;
+  cursor: pointer;
+}
+
+.calendar-field.opened {
+  opacity: 0.5;
+}
+
+dialog{
+  width: 60%;
+  height: 400px;
+}
+
+#dialog-div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+a{
+  text-decoration: none;
+}
+
+@media(max-width: 800px){
+
+  .body-div{
+    padding: 2px;
+    font-size: 1.5rem;
+  }
+
+  #calendar-div{
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calendar-field{
+    font-size: 1.9rem;
+
+  }
+
+  dialog{
+    width: 90%;
+    height: 80vh;
+  }
+
+  
+}
+  
