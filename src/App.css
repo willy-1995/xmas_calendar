@@ -29,6 +29,8 @@ h2{
 
 button{
   border: none;
+  background-color:rgb(94, 55, 9) ;
+  color: antiquewhite;
 }
 
 button:hover{
@@ -102,7 +104,6 @@ dialog{
 #closeButton{
   background-color:rgb(94, 55, 9) ;
   color: antiquewhite ;
-  border: 1px solid rgb(94, 55, 9);
   margin: 0 auto;
 }
 
