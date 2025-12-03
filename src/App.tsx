@@ -58,6 +58,29 @@ function App() {
         <p>Wer feiern kann, muss auch snacken können 😄</p>
       </>
     ),
+    4: (<>
+      <a href="https://www.youtube.com/watch?v=megL8G-W0Uo">Klicke hier, um zu erfahren, was Spaß macht!</a>
+    </>),
+    5: (<></>),
+    6: (<></>),
+    7: (<></>),
+    8: (<></>),
+    9: (<></>),
+    10: (<></>),
+    11: (<></>),
+    12: (<></>),
+    13: (<></>),
+    14: (<></>),
+    15: (<></>),
+    16: (<></>),
+    17: (<></>),
+    18: (<></>),
+    19: (<></>),
+    20: (<></>),
+    21: (<></>),
+    22: (<></>),
+    23: (<></>),
+    24: (<></>),
     // andere 4–24 bleiben leer
   };
 
@@ -87,7 +110,7 @@ function App() {
           <div
             key={n}
             className={`calendar-field grid-item ${
-              openedDoor?.[n] ? "opened" : ""
+              openedDoor[n] ? "opened" : ""
             }`}
             onClick={() => ShowButton(n)}
           >
