@@ -39,6 +39,7 @@ function App() {
   };
 
   //=====CONTENT FOR EACH DOOR
+  //as object
   const dialogContent: Record<number, React.ReactNode> = {
     1: (
       <>
@@ -61,7 +62,9 @@ function App() {
     4: (<>
       <a href="https://www.youtube.com/watch?v=megL8G-W0Uo">Klicke hier, um zu erfahren, was Spaß macht!</a>
     </>),
-    5: (<></>),
+    5: (<>
+      <a href="https://www.youtube.com/watch?v=ZjqNymQYq_g">Der Meme-Horizont muss stetig erweitert werden!</a>
+    </>),
     6: (<></>),
     7: (<></>),
     8: (<></>),
@@ -81,7 +84,7 @@ function App() {
     22: (<></>),
     23: (<></>),
     24: (<></>),
-    // andere 4–24 bleiben leer
+    
   };
 
   //===== SHOW BUTTON
