@@ -65,7 +65,12 @@ function App() {
     5: (<>
       <a href="https://www.youtube.com/watch?v=ZjqNymQYq_g">Der Meme-Horizont muss stetig erweitert werden!</a>
     </>),
-    6: (<></>),
+    6: (<>
+    <p>
+       Auch wenn die Schuhe nicht geputzt sind, kommt der Nikolaus trotzdem gerne vorbei!
+    </p>
+    <img src="/xmas_calendar/media/nicolaus.jpg" alt="nicolaus" style={{maxWidth:"70%" }} />
+     </>),
     7: (<></>),
     8: (<></>),
     9: (<></>),
