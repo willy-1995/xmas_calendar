@@ -7,7 +7,7 @@ function App() {
 
   //===== STATES
   const [openField, setOpenField] = useState<number | null>(null);
-  const [openedDoor, setOpenedDoor] = useState<Record<number, boolean>>({}); 
+  const [openedDoor, setOpenedDoor] = useState<Record<number, boolean>>({});
 
   //===== REFS
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -66,13 +66,26 @@ function App() {
       <a href="https://www.youtube.com/watch?v=ZjqNymQYq_g">Der Meme-Horizont muss stetig erweitert werden!</a>
     </>),
     6: (<>
-    <p>
-       Auch wenn die Schuhe nicht geputzt sind, kommt der Nikolaus trotzdem gerne vorbei!
-    </p>
-    <img src="/xmas_calendar/media/nicolaus.jpg" alt="nicolaus" style={{maxWidth:"70%" }} />
-     </>),
-    7: (<></>),
-    8: (<></>),
+      <p>
+        Auch wenn die Schuhe nicht geputzt sind, kommt der Nikolaus trotzdem gerne vorbei!
+      </p>
+      <img src="/xmas_calendar/media/nicolaus.jpg" alt="nicolaus" style={{ maxWidth: "70%" }} />
+    </>),
+    7: (<>
+      <ul>
+        <li><b>"Ich liebe dich" auf thailändisch:</b></li>
+        <li>ฉันรักคุณ: <b>chǎn rák khun</b>, wenn eine Frau spricht</li>
+        <li>ผมรักคุณ: <b>phǒm rák khun</b>, wenn ein Mann spricht</li>
+      </ul>
+      <img src="/xmas_calendar/media/love.jpg" alt="love" style={{ maxWidth: "60%" }} className="door-img" />
+    </>),
+    8: (<>
+      <p>
+        <b>Das Wort „Thai“ /ไทย</b><br /><br />
+        In der thailändischen Sprache bedeutet „ไทย“ „frei“ oder „Freiheit“.
+        Daher wird oft gesagt, dass Thailand „das Land der Freien“ sei.</p>
+      <img src="/xmas_calendar/media/thai.jpg" alt="love" style={{ maxWidth: "60%" }} className="door-img" />
+    </>),
     9: (<></>),
     10: (<></>),
     11: (<></>),
@@ -89,7 +102,7 @@ function App() {
     22: (<></>),
     23: (<></>),
     24: (<></>),
-    
+
   };
 
   //===== SHOW BUTTON
@@ -97,10 +110,13 @@ function App() {
   const currentDay = today.getDate();
 
   const ShowButton = (n: number) => {
+
     if (n > currentDay) {
       alert("Dieses Türchen darfst du noch nicht öffnen ;-)");
       return;
     }
+
+
 
     setOpenField(openField === n ? null : n);
   };
@@ -117,9 +133,8 @@ function App() {
         {fields.map((n) => (
           <div
             key={n}
-            className={`calendar-field grid-item ${
-              openedDoor[n] ? "opened" : ""
-            }`}
+            className={`calendar-field grid-item ${openedDoor[n] ? "opened" : ""
+              }`}
             onClick={() => ShowButton(n)}
           >
             {n}
