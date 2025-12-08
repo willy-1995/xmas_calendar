@@ -86,7 +86,9 @@ function App() {
         Daher wird oft gesagt, dass Thailand „das Land der Freien“ sei.</p>
       <img src="/xmas_calendar/media/thai.jpg" alt="love" style={{ maxWidth: "60%" }} className="door-img" />
     </>),
-    9: (<></>),
+    9: (<>
+      <a href="https://www.youtube.com/watch?v=1GThZgwm83k">Erwachsen sein ist langweilig (hier klicken)</a>
+    </>),
     10: (<></>),
     11: (<></>),
     12: (<></>),
