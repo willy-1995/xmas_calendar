@@ -89,7 +89,10 @@ function App() {
     9: (<>
       <a href="https://www.youtube.com/watch?v=1GThZgwm83k">Erwachsen sein ist langweilig (hier klicken)</a>
     </>),
-    10: (<></>),
+    10: (<>
+      <p>In Thailand ist der Satz „Sabai Sabai“ ein Lebensmotto. Er bedeutet „immer mit der Ruhe“ und spiegelt die lockere, entspannte Haltung wider, die die Einheimischen in ihren Alltag einbringen. Stress? Nein, sie nehmen es einfach sabai sabai!</p>
+      <img src="/xmas_calendar/media/sabai.jpg" alt="sabai" />
+    </>),
     11: (<></>),
     12: (<></>),
     13: (<></>),
