@@ -43,55 +43,41 @@ function App() {
   const dialogContent: Record<number, React.ReactNode> = {
     1: (
       <>
-        <h2>Butterbun Rezept:</h2>
-        <p>…</p>
+        <h2>Die Adventszeit beginnt!</h2>
+        
       </>
     ),
     2: (
       <>
-        <a href="https://www.youtube.com/shorts/hL2d6MEBi60">
-          Ein Blick in die Zukunft …
-        </a>
+        
       </>
     ),
     3: (
       <>
-        <p>Wer feiern kann, muss auch snacken können 😄</p>
+        
       </>
     ),
     4: (<>
-      <a href="https://www.youtube.com/watch?v=megL8G-W0Uo">Klicke hier, um zu erfahren, was Spaß macht!</a>
+    
     </>),
     5: (<>
-      <a href="https://www.youtube.com/watch?v=ZjqNymQYq_g">Der Meme-Horizont muss stetig erweitert werden!</a>
+      
     </>),
     6: (<>
-      <p>
-        Auch wenn die Schuhe nicht geputzt sind, kommt der Nikolaus trotzdem gerne vorbei!
-      </p>
-      <img src="/xmas_calendar/media/nicolaus.jpg" alt="nicolaus" style={{ maxWidth: "70%" }} />
+      
+      
     </>),
     7: (<>
-      <ul>
-        <li><b>"Ich liebe dich" auf thailändisch:</b></li>
-        <li>ฉันรักคุณ: <b>chǎn rák khun</b>, wenn eine Frau spricht</li>
-        <li>ผมรักคุณ: <b>phǒm rák khun</b>, wenn ein Mann spricht</li>
-      </ul>
-      <img src="/xmas_calendar/media/love.jpg" alt="love" style={{ maxWidth: "60%" }} className="door-img" />
+     
     </>),
     8: (<>
-      <p>
-        <b>Das Wort „Thai“ /ไทย</b><br /><br />
-        In der thailändischen Sprache bedeutet „ไทย“ „frei“ oder „Freiheit“.
-        Daher wird oft gesagt, dass Thailand „das Land der Freien“ sei.</p>
-      <img src="/xmas_calendar/media/thai.jpg" alt="love" style={{ maxWidth: "60%" }} className="door-img" />
+      
     </>),
     9: (<>
-      <a href="https://www.youtube.com/watch?v=1GThZgwm83k">Erwachsen sein ist langweilig (hier klicken)</a>
+      
     </>),
     10: (<>
-      <p>In Thailand ist der Satz „Sabai Sabai“ ein Lebensmotto. Er bedeutet „immer mit der Ruhe“ und spiegelt die lockere, entspannte Haltung wider, die die Einheimischen in ihren Alltag einbringen. Stress? Nein, sie nehmen es einfach sabai sabai!</p>
-      <img src="/xmas_calendar/media/sabai.jpg" alt="sabai" />
+     
     </>),
     11: (<></>),
     12: (<></>),
@@ -128,10 +114,14 @@ function App() {
 
   return (
     <div className="body-div">
+      <label htmlFor="date-active">
+          <input type="checkbox" checked id="date-active"/>
+      </label>
+      
       <video autoPlay loop muted src="/xmas_calendar/media/cookieman.mp4"></video>
 
       <h2 id="main-heading">
-        Frohe Weihnachten <br /> liebe Samira!
+        Frohe Weihnachten <br /> liebe/r Musterperson
       </h2>
 
       <div id="calendar-div">
